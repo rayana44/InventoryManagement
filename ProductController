@@ -5,7 +5,8 @@ public class ProductController
 //@Autowired  
 private ProductSerrvice productService;
 @GetMapping(value="/products")
-public ResponseEntity<List<Product>> getAllProducts()
+public ResponseEntity<List<Product>> getAllProducts(@Parameter (description="Filter by availability.true=only in stock,false=only out of stock")
+@RequestParam(required= false) Boolean available
 {
 List<Product> products  = productService.getAllProducts()
 return ResponseEntity.ok(products):
