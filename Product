@@ -1,0 +1,10 @@
+@Entity
+Public class Product
+{
+@Id
+@GeneratedValue
+private Long id;
+private String name;
+private boolean availability;
+//getters and setters
+}
