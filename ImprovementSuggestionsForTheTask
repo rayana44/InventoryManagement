@@ -1,0 +1,13 @@
+1) Introduce DTO Layer to separate internal Product entities from the API response.This improves decoupling and flexibility without touching Business logic
+2)Use Service Interfaces for better abstraction 
+
+Perfomance Oprtimizatoin
+
+1)Add Pagination
+2)Use @Cacheable
+3)Use Index on the database columns
+
+HouseKeeping 
+1)Use equals and hashcode methods
+2) Use Lombok
+
