@@ -8,11 +8,12 @@ Public List<Product> getAllProducts(Boolean  available)
 {
 if(available==null)
 {
-return productRepository.findAll();
+products = productRepository.findAll();
 }
 else
 {
-return productRepository.findByAvailable(available);
+products =  productRepository.findByAvailable(available);
 }
+return products.stream().distinct().collect(Collectors.toLIst()):
 }
 }
