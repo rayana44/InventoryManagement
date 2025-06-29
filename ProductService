@@ -1,0 +1,18 @@
+@Service
+public class ProductService
+{
+@Autowired
+private ProductRepository productRepository;
+
+Public List<Product> getAllProducts(Boolean  available)
+{
+if(available==null)
+{
+return productRepository.findAll();
+}
+else
+{
+return productRepository.findByAvailable(available);
+}
+}
+}
